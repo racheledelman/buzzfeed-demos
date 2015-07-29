@@ -15,62 +15,162 @@
 	.fontawesome-bolt{color:#e32;}
 	.fontawesome-facebook-sign{color:#3b5998;}
 	.fontawesome-twitter{color:#55acee;}
-	.column {width:400px;}
-	section {width:2500px;}
-	.scroll-wrapper {overflow-x:scroll; width: 100%;}
+	.column {width:390px; height:100%; overflow-y: auto;}
+	section {width:2500px; height:100%;}
+	.scroll-wrapper {overflow-x:scroll; overflow-y:hidden; width: 100%; height:600px;}
+	select {border:none; height:40px;}
+	dialog {width:500px;}
 	</style>
 </head>
 <body class="fill-gray">
 	
-<header class="border mb2 fill-gray--lighter p3">
-	<h1>Social Mission Control -  <button class="button button--secondary">Food - Facebook <span class="fontawesome-caret-down"></span></button></h1>
+<header class="border mb2 fill-gray--lighter p2 clearfix">
+	<h1 class="float-left mr2">Social Mission Control</h1>
+	
+	<select class="float-left m1 fill-blue text-white">
+	  <option value="volvo">BuzzFeed - Facebook</option>
+	  <option value="saab">BuzzFeed - Twitter</option>
+	  <option value="audi">BuzzFeed Australia - Facebook</option>
+	  <option value="audi">BuzzFeed Australia - Twitter</option>
+	  <option value="audi">BuzzFeed UK - Facebook</option>
+	  <option value="audi">BuzzFeed UK - Twitter</option>
+	  <option value="volvo">Celeb - Facebook</option>
+	  <option value="volvo">DIY - Facebook</option>
+	  <option value="volvo">Entertainment - Facebook</option>
+	  <option value="volvo">Espanol - Facebook</option>
+	  <option value="mercedes">Food - Facebook</option>
+	  <option value="audi">Food - Twitter</option>
+	  <option value="audi">Life - Facebook</option>
+	  <option value="audi">News - Facebook</option>
+	  <option value="audi">News - Twitter</option>
+	  <option value="audi">Trending - Facebook</option>
+	</select>
+	
+	<button class="button button--secondary float-right" onclick="myFunction()">Filter Posts</button>
+	<dialog id="myDialog" class="rounded xs-border">
+		<h2>Show Posts From:</h2>
+			<input type="radio" class="radio" id="option_1" value="option_1" name="options" checked="checked">
+			<label class="radio-label" for="option_1">All</label>
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Buzz</label> 
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">News</label> 	
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Life</label> 		
+		<hr>
+		<div class="float-left mr2">
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Animals</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Audio</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Big Stories</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Books</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Business</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Celebrity</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">DIY</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Entertainment</label>
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Food</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Geeky</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Health</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Ideas</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">LGBT</label> 
+		</div>
+		<div class="float-left">		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Music</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Parents</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Podcasts</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Politics</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Rewind</label>
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Science</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Sports</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Style</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Tech</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Travel</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Weddings</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">Weekend</label> 		
+			<input type="checkbox" class="checkbox" id="check_2" value="check_2" name="checkboxes">
+			<label for="check_2">World</label>
+		</div>
+				
+	</dialog>
+	<script>
+	function myFunction() { 
+	    document.getElementById("myDialog").showModal(); 
+	} 
+	</script>
+
 </header>
 
 <div class="scroll-wrapper">
 
-<section class="var2 p2 clearfix xfill-red">
-<button class="button button--primary float-left">Filter</button>
+<section class="var2 p2 clearfix">
 	
- <div class="column pr1 float-left">
+ <div class="column mr1 float-left">
   <div class="border clearfix fill-white">
-	<h2 class="fill-gray--lighter border-bottom p1 ">Watch List</h2>
+	<h2 class="fill-gray--lighter border-bottom p1 "><span class="fontawesome-star"></span> Watch List</h2>
 	<ul class="list-unstyled">
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
@@ -81,48 +181,111 @@
 </div>
 </div>
 
- <div class="column pr1 float-left">
+ <div class="column mr1 float-left">
   <div class="border clearfix fill-white">
-	<h2 class="fill-gray--lighter border-bottom p1">All</h2>
+	<h2 class="fill-gray--lighter border-bottom p1">Chronological</h2>
 	<ul class="list-unstyled">
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
@@ -131,98 +294,210 @@
 </div>
 </div>
 
- <div class="column pr1 float-left">
+ <div class="column mr1 float-left">
   <div class="border clearfix fill-white">
 	<h2 class="fill-gray--lighter border-bottom p1">Social Lift</h2>
 	<ul class="list-unstyled">
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter fill-yellow--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small fill-white">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		
 	</ul>
 </div>
 </div>
 
- <div class="column pr1 float-left">
+ <div class="column mr1 float-left">
   <div class="border clearfix fill-white">
 	<h2 class="fill-gray--lighter border-bottom p1">Views</h2>
 	<ul class="list-unstyled">
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
@@ -231,48 +506,111 @@
 </div>
 </div>
 
- <div class="column pr1 float-left">
+ <div class="column mr1 float-left">
   <div class="border clearfix fill-white">
-	<h2 class="fill-gray--lighter border-bottom p1">Facebook Engagment</h2>
+	<h2 class="fill-gray--lighter border-bottom p1">Facebook Engagement</h2>
 	<ul class="list-unstyled">
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
@@ -281,52 +619,116 @@
 </div>
 </div>
 
- <div class="column pr1 float-left">
+ <div class="column mr1 float-left">
   <div class="border clearfix fill-white">
-	<h2 class="fill-gray--lighter border-bottom p1">Twitter Engagment</h2>
+	<h2 class="fill-gray--lighter border-bottom p1">Twitter Engagement</h2>
 	<ul class="list-unstyled">
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
 		<li class="float-left full-width border-bottom--lighter p1">
 			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
-			<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
 			<div class="">
 				<span class="fontawesome-bolt"></span> 1.7x
 				<span class="fontawesome-eye-open ml2"></span> 105k
 				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
 				<span class="fontawesome-twitter ml2"></span> 90
 			</div>
-			<div class="float-right mt2">
+			<div class="mt2">
 				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
 				<button class="button button--secondary button--small">Hide</button>
 			<div>
 		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		<li class="float-left full-width border-bottom--lighter p1">
+			<img src="http://s3-static-ak.buzzfed.com/static/2015-07/21/12/campaign_images/webdr11/which-famous-artist-were-you-in-your-past-life-2-1816-1437497965-1.jpg"  class="float-left"> 
+					<h3><a href="#">Which Famous Artist Were You In Your Past Life?</a></h3>
+					<p class="text-6 pt1 pb1">posted on Jul. 24, 2015, at 12:01 p.m.</p>
+			<div class="">
+				<span class="fontawesome-bolt"></span> 1.7x
+				<span class="fontawesome-eye-open ml2"></span> 105k
+				<span class="fontawesome-facebook-sign ml2"></span> 8.4k
+				<span class="fontawesome-twitter ml2"></span> 90
+			</div>
+			<div class="mt2">
+				<button class="button button--primary button--small"><span class="fontawesome-star"></span></button>
+				<button class="button button--secondary button--small">Hide</button>
+			<div>
+		</li>
+		
 	</ul>
 </div>
 </div>
